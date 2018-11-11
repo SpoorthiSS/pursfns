@@ -3,20 +3,15 @@ module Main where
 import Prelude
 import Effect (Effect)
 import Effect.Console (logShow)
-import Data.Tuple ( Tuple(..) ,fst) 
+import Data.Tuple ( Tuple(..) ,fst, curry) 
 
 
--- type Tuple1 a = T2 a Unit
--- type Tuple2 a b = T3 a b Unit
+-- fst1 :: forall a b. Tuple a b -> a 
+-- fst1 v = fst v 
+-- myTup = Tuple "a" "b" 
+-- main = logShow (fst (myTup))
 
--- type T2 a z = Tuple a z
--- type T3 a b z = Tuple a (T2 b z)
--- data Tuple a b = Tuple a b 
-
--- tuple1 :: forall b a. a -> b -> Tuple a b
--- tuple1 a b =  Tuple a b
-
-
-fst1 :: forall a b. Tuple a b -> a
-fst1 Tuple a b =  fst Tuple a b
-main = logShow (fst [a,b])
+curry1 :: forall a b c. (Tuple a b -> c) -> a -> b -> c
+curry1 fnc fnc1 fnc2  = curry fnc 
+myTup = Tuple  1 2 
+main = logShow ( curry myTup)
