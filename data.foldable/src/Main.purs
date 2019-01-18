@@ -26,5 +26,16 @@ import Data.Maybe
 
 -- main = logShow(find (\x -> elem x [1,2,3]) [1,2,3])
 
-main = logShow (fold [Just [2,3] , Just [4]])
+-- main = logShow (fold [Just [2,3] , Just [4]])
 
+-- main = logShow (findMap (\x -> Just(x+1)) [1,2,3])
+-- main = logShow (maximum [1,2])
+-- main = logShow (maximumBy ( compare )[1,2,3])
+-- main = logShow (and [true , false , true])
+-- main = logShow ( all not [true , false])
+-- main = logShow (for_ [1.0,2.0] (\x -> Just(x+1)))
+-- main = logShow (traverse_ (\x -> Just(x+1)) [1,2])
+-- main = logShow (all not [true , false])
+
+-- parseEmail :: String -> Maybe Email
+-- parseEmail string = if (string == ""[" ++ @gmail.com ++ "]"") then true else false 
