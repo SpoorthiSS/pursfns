@@ -1,5 +1,5 @@
 {
-  "name": "pursfns",
+  "name": "data.traversable",
   "ignore": [
     "**/.*",
     "node_modules",

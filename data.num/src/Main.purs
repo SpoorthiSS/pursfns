@@ -19,6 +19,6 @@ import Global (nan ,isNaN , isFinite)
 -- isNaN1 num = isNaN num 
 -- main = logShow ( isNaN 1.0)
 
--- isFinite1 :: Number -> Boolean
--- isFinite1 num = isFinite num 
--- main = logShow ( isFinite 1293812983021983902830921.0000)
+isFinite1 :: Number -> Boolean
+isFinite1 num = isFinite num 
+main = logShow ( isFinite 1293812983021983902830921.0000)

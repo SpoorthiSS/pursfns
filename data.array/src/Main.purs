@@ -3,7 +3,7 @@ module Main where
 import Prelude
 import Effect (Effect)
 import Effect.Console (logShow)
-import Data.Array ( fromFoldable , toUnfoldable ,findLastIndex , concatMap , )
+import Data.Array ( fromFoldable , toUnfoldable ,findLastIndex , concatMap , toUnfoldable )
 import Data.Unfoldable
 import Data.Foldable
 import Data.String.Pattern
@@ -39,4 +39,6 @@ import Data.String.Common (split)
 -- main = logShow (concatMap (split $ Pattern " ") ["Hello World", "other thing"])
 
 -- main = logShow (catMaybes [Just 1 , Just 1])
+
+main = logShow (toUnfoldable [1,2] :: Array Int )
 

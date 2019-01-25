@@ -3,7 +3,8 @@ module Main where
 import Prelude
 import Effect (Effect)
 import Effect.Console (logShow)
-import Data.List(mapWithIndex , List(..), takeEnd , takeWhile , partition)
+import Data.Maybe
+import Data.List(mapWithIndex , List(..), takeEnd , takeWhile , partition, mapMaybe , sort)
 import Text.Parsing.Parser.String(null)
 
 
@@ -34,7 +35,8 @@ intList = (Cons  0 ( Cons 9 (Cons 8 (Cons 2 Nil))))
 -- takeWhile1 f l = takeWhile f l 
 -- main = logShow (takeWhile null1 myList ) 
 
--- main = logShow (sort (2 : -3 : 1 : Nil))
+-- main = logShow (sort intList )
+main = logShow (mapMaybe (\x -> Just (x+1)) intList)
 
 -- partition1 :: forall a. (a -> Boolean) -> List a -> { yes :: List a, no :: List a }
 -- partition1 f l = partition f l
